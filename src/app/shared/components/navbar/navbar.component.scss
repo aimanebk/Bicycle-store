@@ -1,6 +1,7 @@
 $navbar-background : #1D1D1D;
 $navbar-hover-color : #ddd;
 $search-model-background : #000;
+$menu-padding: 10px;
 
 body {
     margin: 0;
@@ -8,6 +9,7 @@ body {
 }
 
 /* NAVBAR */
+
 .topnav {
     overflow: hidden;
     background-color: $navbar-background;
@@ -15,15 +17,18 @@ body {
         float: left;
         color: #f2f2f2;
         text-align: center;
-        padding: 14px 16px;
+        padding: $menu-padding;
         text-decoration: none;
         font-size: 17px;
-        border-right: 1px solid $navbar-hover-color ;
-        border-left: 1px solid $navbar-hover-color ;
+        border-right: 1px solid #333 ;
+        border-left: 1px solid #333 ;
+        svg {
+            margin: 17px;
+        }
         &:hover{
             background-color: $navbar-hover-color ;
             color: black;
-            .search-icon {
+            .icon-hover {
                 fill: $search-model-background
             }
         }
@@ -76,5 +81,75 @@ body {
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
+
+// SHOP CATEGORY MENU
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 100px;
+
+    .grid-item {
+        font-style: oblique;
+        text-align: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+}
+
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+
+    a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        &:hover {
+            color: #f1f1f1;
+        }
+        &:focus{
+            color: #f1f1f1;
+        }
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    } 
+}
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+    
+  @media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+        a {font-size: 20px}
+        .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }
+  }
 
 
