@@ -1,3 +1,17 @@
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. NAVBAR
+2. SEARCH MODAL 
+3. SHOP CATEGORY MENU
+4. CART BADGE
+5. RESPONSIVE
+
+******************************/
+
 $navbar-background : #1D1D1D;
 $navbar-hover-color : #ddd;
 $search-model-background : #000;
@@ -31,7 +45,8 @@ $menu-padding: 10px;
     }
     .nav-title {
         font-family: 'Rye', cursive !important;
-        float: left;
+        display: inline;
+        vertical-align: middle;
         color: #f2f2f2;
         text-align: center;
         padding: $menu-padding + 12 ;
@@ -142,17 +157,8 @@ $menu-padding: 10px;
     width: 100%;
     text-align: center;
     margin-top: 30px;
-  }
-    
-  @media screen and (max-height: 450px) {
-    .overlay {
-        overflow-y: auto;
-        a {font-size: 20px}
-        .closebtn {
-            font-size: 40px;
-            top: 15px;
-            right: 35px;
-        }
+    .responsive-search {
+        display: none;
     }
   }
 
@@ -163,5 +169,78 @@ $menu-padding: 10px;
     top: -12px;
     left: -11px;
   }
+
+@media only screen and (max-width: 970px)
+{   .topnav{
+        grid-template-columns: 191px auto 91px 91px 91px;
+        .search-item{
+            display: none;
+        }
+    }
+
+    .overlay-content {
+        top : 10%;
+        .responsive-search {
+            display: inline;
+        }
+    }
+    
+}
+
+// RESPONSIVE
+
+@media only screen and (max-width: 850px)
+{   .topnav{
+        grid-template-columns: 91px auto 91px 91px 91px;
+        div:last-child{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px)
+{   .topnav{
+        grid-template-columns: auto auto auto auto auto;
+        .nav-item {
+            padding: 0px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .nav-title {          
+            padding: 10px ;
+            h2{
+                font-size: 1em;
+            }
+        }
+    }
+
+    .grid-container {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{   
+    .topnav{
+        .nav-title {          
+            h2{
+                font-size: 0.7em;
+            }
+        }
+    }
+
+    .overlay {
+        overflow-y: auto;
+        a {font-size: 20px}
+        .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }
+}
 
 

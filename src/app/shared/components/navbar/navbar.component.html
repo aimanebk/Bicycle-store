@@ -1,5 +1,5 @@
 <div class="topnav">
-  <a class="nav-item" data-toggle="modal" data-target="#searchModal" data-backdrop="static" data-keyboard="false"> 
+  <a class="nav-item search-item" data-toggle="modal" data-target="#searchModal" data-backdrop="static" data-keyboard="false"> 
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
       y="0px" width="30px" height="30px" viewBox="0 0 485.213 485.213" style="enable-background:new 0 0 485.213 485.213;"
       xml:space="preserve">
@@ -31,7 +31,8 @@
               data-original="#000000" class="active-path icon-hover" data-old_color="#000000" fill="#FCF7F7" />
           </g>
         </g>
-      </svg></div>
+      </svg>
+    </div>
     <div class="grid-item">
       Shop
       Category
@@ -102,6 +103,9 @@
 <div #shopCatgoryMenu class="overlay">
     <a class="closebtn" (click)="closeShopCatgoryMenu()" >&times;</a>
     <div class="overlay-content">
+      <form class="search-model-form responsive-search">
+        <input type="text" id="search-input" placeholder="Search here.....">
+      </form>
       <a href="#">Race Road/TT bikes</a>
       <a href="#">Road Mountain bikes</a>
       <a href="#">Lifestyle bikes</a>
@@ -112,4 +116,4 @@
       <a href="#">....</a>
       <a href="#">....</a>
     </div>
-  </div>
+</div>
