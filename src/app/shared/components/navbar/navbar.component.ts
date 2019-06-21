@@ -9,7 +9,7 @@ import { Component, OnInit, Renderer2, ElementRef, ViewChild } from '@angular/co
 
 export class NavbarComponent implements OnInit {
   @ViewChild('shopCatgoryMenu', {static : false }) shopCatgoryMenu: ElementRef;
-
+  private cartCount : number = 11;
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
