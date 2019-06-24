@@ -1,0 +1,169 @@
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. GLOBAL FUNCTIONS
+2. SLIDER 
+3. TEXT ANIMATION
+4. RESPONSIVE
+
+******************************/
+
+@mixin rotation($rot){
+    -webkit-transform: rotate($rot);
+    -moz-transform: rotate($rot);
+    -ms-transform: rotate($rot);
+    -o-transform: rotate($rot);
+    transform: rotate($rot);
+}
+
+@mixin fadein{
+    animation-duration: 1s;
+    animation-name: fadein;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+//SLIDER
+.carousel,
+.carousel-inner {
+     height: 100vh;
+}
+
+.carousel-item{
+    img {
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        height: 100vh;
+        max-width: none;
+        object-fit:cover;
+        object-position:left;
+       }
+
+    .carousel-caption{
+        padding-bottom: 200px;
+        display: grid;
+        grid-template-columns: auto 50%;
+
+        h2{
+            font-size: 70px;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: 0;
+        }
+
+        a{
+            background: #fc3a52;
+            padding: 15px 35px;
+            display: inline-block;
+            margin-top: 15px;
+            color: #fff;
+            border-radius: 25px;
+            opacity: 0;
+        }
+    }
+} 
+
+.left-arrow {
+    @include rotation(15deg);
+}
+
+.right-arrow {
+    @include rotation(-15deg);
+}
+
+//ANIMATION
+.carousel-item.active{
+    .carousel-caption {
+        h2 {
+            @include fadein();
+        }
+        a {
+            @include fadein();
+            animation-delay:1s;
+        }
+    }
+} 
+
+
+// RESPONSIVE
+
+  @media only screen and (min-height: 750px)
+  {   
+    .carousel-item{
+        .carousel-caption{
+            padding-bottom: 300px;
+        }
+    }
+  }
+
+  @media only screen and (max-height: 550px)
+  {   
+    .carousel-item{
+        .carousel-caption{
+            padding-bottom: 100px;
+        }
+    }
+  }
+
+  @media only screen and (min-width: 1800px)
+  {   
+    .carousel-item{
+        .carousel-caption{
+            grid-template-columns: auto 40%
+        }
+    }
+  }
+
+@media only screen and (max-width: 850px)
+{   
+    .carousel-item{
+        .carousel-caption{
+            grid-template-columns: auto 70%
+        }
+    }
+}
+
+@media only screen and (max-width: 750px)
+{   
+    .carousel-item{
+        .carousel-caption{
+            display : flex;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px)
+{   
+    .carousel-item{
+        .carousel-caption{
+            h2{
+                font-size: 45px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px)
+{   
+    .carousel-item{
+        .carousel-caption{
+            h2{
+                font-size: 35px !important;
+            }
+        }
+    }
+}
