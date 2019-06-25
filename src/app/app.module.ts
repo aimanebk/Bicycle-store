@@ -10,6 +10,7 @@ import { PresentationComponent } from './home/presentation/presentation.componen
 
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { ProductsComponent } from './home/products/products.component';
+import { HorizontalProductComponent } from './home/products/horizontal-product/horizontal-product.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductsComponent } from './home/products/products.component';
     NavbarComponent,
     SliderComponent,
     PresentationComponent,
-    ProductsComponent
+    ProductsComponent,
+    HorizontalProductComponent
   ],
   imports: [
     BrowserModule,
