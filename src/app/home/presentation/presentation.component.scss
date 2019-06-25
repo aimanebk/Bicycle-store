@@ -1,0 +1,225 @@
+@mixin text-animation {
+    -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.presentation-section{
+    height: 100vh;
+    .row {
+        height: fit-content;
+        min-height: 100vh;
+    }
+
+    .card-title{
+        font-size: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .card-text {
+        font-size: 20px;
+    }
+
+    a{
+        background: #fc3a52;
+        padding: 15px 35px;
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: #fff;
+        border-radius: 25px;
+    }
+}
+
+.image-container{
+    .img-1{
+        width: 300px;
+        position: absolute;
+        z-index: 1;
+        top: -74px;
+        opacity: 0;
+      }
+    
+      .img-2{
+        width: 300px;
+        position: absolute;
+        left: 201px;
+        top: -193px;
+        opacity: 0;
+      }
+}
+
+.title-animation {
+    @include text-animation();
+    animation-delay: 0.5s;
+}
+
+.text-animation {
+    @include text-animation();
+    animation-delay: 2s;
+}
+
+.button-animation {
+    @include text-animation();
+    animation-delay: 3s;
+}
+
+.slide-in-left {
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 1.2s;
+
+}
+
+.slide-in-right {
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 1s;
+}
+
+
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;   
+    }
+}
+
+@-webkit-keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    90%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    90%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-bottom {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px) translateY(500px);
+        transform: translateZ(-700px) translateY(500px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px) translateY(500px);
+        transform: translateZ(-700px) translateY(500px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;   
+    }
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1050px)
+{   
+    .image-container{
+        .img-1{
+            width: 250px;
+            }
+        
+        .img-2{
+        width: 250px;
+        }
+    }
+}
+
+@media only screen and (max-width: 950px)
+{   
+    .image-container{
+        .img-1{
+            width: 200px;
+            }
+        
+        .img-2{
+        width: 200px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px)
+{   
+    .presentation-section{
+        .card-title{
+            font-size: 42px;
+        }
+    }
+
+    .image-container{
+        text-align: center;
+
+        .img-1{
+            width: none;
+            position: initial;
+            z-index: 1;
+            top: 0px;
+            left:0px
+        }
+        
+        .img-2{
+            display: none;
+        }
+    }
+}
+  
+  
+  
