@@ -9,6 +9,9 @@ import { SliderComponent } from './home/slider/slider.component';
 import { PresentationComponent } from './home/presentation/presentation.component';
 
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import { ProductsComponent } from './home/products/products.component';
+import { HorizontalProductComponent } from './home/products/horizontal-product/horizontal-product.component';
+import { VerticalProductComponent } from './home/products/vertical-product/vertical-product.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
     HomeComponent,
     NavbarComponent,
     SliderComponent,
-    PresentationComponent
+    PresentationComponent,
+    ProductsComponent,
+    HorizontalProductComponent,
+    VerticalProductComponent
   ],
   imports: [
     BrowserModule,
