@@ -6,31 +6,27 @@
     <div class="row no-gutters"  *ngIf="i % 4 === 0">
       <div class="col-lg-8" >
         <div class="row no-gutters">
-          <div class="col-md-12">
-            <!-- <div style="background-color:#7D8286"></div> -->
+          <div class="col-md-12 column" animateOnScroll animationName="slide-in-left">
             <app-horizontal-product [product]="product" [backgroundColor]="'#7D8286'"></app-horizontal-product>
           </div>
           <div class="col-md-12" >
             <div class="row no-gutters">
-              <div class="col-md-6" *ngIf="i + 1 < featuredProduct.length">
-                <!-- <div style="background-color: #2E161A"></div> -->
+              <div class="col-md-6 column" *ngIf="i + 1 < featuredProduct.length" animateOnScroll animationName="slide-in-right">
                 <app-horizontal-product [product]="featuredProduct[i+1]" [backgroundColor]="'#2E161A'"></app-horizontal-product>
               </div>
-              <div class="col-md-6" *ngIf="i + 2 < featuredProduct.length">
-                <!-- <div style="background-color:#FAB651 "></div> -->
+              <div class="col-md-6 column" *ngIf="i + 2 < featuredProduct.length" animateOnScroll animationName="slide-in-left">
                 <app-horizontal-product [product]="featuredProduct[i+2]" [backgroundColor]="'#FAB651'"></app-horizontal-product>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4" *ngIf="i + 3 < featuredProduct.length">
-        <!-- <div style="background-color: #343746"></div> -->
+      <div class="col-lg-4 column" *ngIf="i + 3 < featuredProduct.length" animateOnScroll animationName="slide-in-right">
         <app-vertical-product [product]="featuredProduct[i+3]" [backgroundColor]="'#343746'"></app-vertical-product>
       </div>
     </div>
   </div>
-  <div class="text-center p-3">
+  <div class="text-center p-3" animateOnScroll animationName="slide-in-left">
       <button type="button" class="btn btn-lg btn-outline-danger" (click)="loadMore()">LOAD MORE ... </button>
   </div>
 </section>
