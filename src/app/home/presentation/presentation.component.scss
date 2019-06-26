@@ -16,10 +16,12 @@ $button-color : $button-primary-color;
         font-size: 60px;
         font-weight: bold;
         text-transform: uppercase;
+        opacity: 0;
     }
 
     .card-text {
         font-size: 20px;
+        opacity: 0;
     }
 
     a{
@@ -30,6 +32,7 @@ $button-color : $button-primary-color;
         margin-bottom: 15px;
         color: $text-color;
         border-radius: 25px;
+        opacity: 0;
     }
 }
 
