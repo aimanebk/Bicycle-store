@@ -1,7 +1,13 @@
+@import '../../shared/styles/variables';
+
+$text-color :$text-primary-color;
+$button-color : $button-primary-color;
+
 @mixin text-animation {
     -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
+
 
 .presentation-section{
     min-height: 100vh;
@@ -21,12 +27,12 @@
     }
 
     a{
-        background: #fc3a52;
+        background: $button-color;
         padding: 15px 35px;
         display: inline-block;
         margin-top: 15px;
         margin-bottom: 15px;
-        color: #fff;
+        color: $text-color;
         border-radius: 25px;
     }
 }

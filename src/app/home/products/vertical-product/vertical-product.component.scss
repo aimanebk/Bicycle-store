@@ -1,9 +1,11 @@
-$text-color : #fff;
-$buy-button-color : #fff;
-$buy-button-hover-color : #fc3a52;
+@import '../../../shared/styles/variables';
+
+$text-color :$text-primary-color;
+$buy-button-color : $button-secondary-color;
+$buy-button-hover-color : $button-primary-color;
 $favorite-button-color : #909497;
-$favorite-button-hover-color : #fc3a52;
-$badge-back-color: #fc3a52;
+$favorite-button-hover-color : $button-primary-color;
+$badge-back-color: $button-primary-color;
 
 .vertical-section {
     height: 700px; 
@@ -69,6 +71,7 @@ $badge-back-color: #fc3a52;
         position: relative;
         top: 14px;
         left: 20px;
+        color:$text-color;
     }
 }
 

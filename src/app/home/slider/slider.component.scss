@@ -10,6 +10,10 @@
 4. RESPONSIVE
 
 ******************************/
+@import '../../shared/styles/variables';
+
+$text-color :$text-primary-color;
+$button-color : $button-primary-color;
 
 @mixin rotation($rot){
     -webkit-transform: rotate($rot);
@@ -66,11 +70,11 @@
         }
 
         a{
-            background: #fc3a52;
+            background: $button-color;
             padding: 15px 35px;
             display: inline-block;
             margin-top: 15px;
-            color: #fff;
+            color: $text-color;
             border-radius: 25px;
             opacity: 0;
         }
