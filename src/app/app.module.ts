@@ -12,6 +12,7 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { ProductsComponent } from './home/products/products.component';
 import { HorizontalProductComponent } from './home/products/horizontal-product/horizontal-product.component';
 import { VerticalProductComponent } from './home/products/vertical-product/vertical-product.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { VerticalProductComponent } from './home/products/vertical-product/verti
     PresentationComponent,
     ProductsComponent,
     HorizontalProductComponent,
-    VerticalProductComponent
+    VerticalProductComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
