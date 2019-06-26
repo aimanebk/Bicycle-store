@@ -7,7 +7,7 @@ import { Products } from 'src/app/shared/models/products';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  featuredProduct : Products[] = [  
+  data =  [  
     {
       title : 'mountain bikes',
       description : 'Carbon Rims Wide',
@@ -33,9 +33,15 @@ export class ProductsComponent implements OnInit {
       image : 'assets/imgs/parts/parts-4.png'
     },
   ];
+
+  featuredProduct : Products[] = this.data;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  loadMore(){
+    this.featuredProduct.push(...this.data);
   }
 
 }

@@ -1,4 +1,7 @@
 <section class="products-section">
+  <div class="text-center">
+      <h1>FEATURED PRODUCTS</h1>
+  </div>
   <div class="container-fluid" *ngFor="let product of featuredProduct; let i = index">
     <div class="row no-gutters"  *ngIf="i % 4 === 0">
       <div class="col-lg-8" >
@@ -26,5 +29,8 @@
         <app-vertical-product [product]="featuredProduct[i+3]" [backgroundColor]="'#343746'"></app-vertical-product>
       </div>
     </div>
+  </div>
+  <div class="text-center p-3">
+      <button type="button" class="btn btn-lg btn-outline-danger" (click)="loadMore()">LOAD MORE ... </button>
   </div>
 </section>
