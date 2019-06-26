@@ -1,0 +1,107 @@
+@import '../../../shared/styles/variables';
+
+$text-color :$text-primary-color;
+$buy-button-color : $button-secondary-color;
+$buy-button-hover-color : $button-primary-color;
+$favorite-button-color : #909497;
+$favorite-button-hover-color : $button-primary-color;
+$badge-back-color: $button-primary-color;
+
+.vertical-section {
+    height: 700px; 
+}
+
+  
+.text {
+    width: 100%;
+    .subheading {
+        font-size: 12px;
+        letter-spacing: 4px;
+        color: $text-color;
+        font-weight: 600;
+        text-transform: uppercase; 
+    }
+    h2 {
+        position: relative;
+        top: 10px;
+        color: $text-color;
+        font-weight: 700;
+        font-size: 28px; 
+    }
+}
+
+.buy-button{
+    background: $buy-button-color;
+    padding: 15px 35px;
+    font-size: 17px;
+    display: inline-block;
+    margin: 5px;
+    color: #000;
+    border-radius: 50px;
+
+    &:hover{
+        background: $buy-button-hover-color;
+        color: #fff;
+        .buy-hover{
+            fill:#fff
+        }
+    }
+}
+
+.favorite-button{
+    background: $favorite-button-color;
+    padding: 15px 15px;
+    display: inline-block;
+    margin: 5px;
+    color: #000;
+    border-radius: 50px;
+
+    &:hover{
+        .favorite-hover{
+            fill:$favorite-button-hover-color
+        }
+    }
+}
+.text-price {
+    width: 50px;
+    p{
+        font-size: 19px;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        top: 14px;
+        left: 20px;
+        color:$text-color;
+    }
+}
+
+.img{
+    position: relative;
+    bottom: 150px;
+}
+
+.new-badge{
+    background: $badge-back-color;
+    padding: 0px 20px;
+    font-size: 25px;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 10px;
+    color: #fff !important;
+    position: relative;
+    bottom: 200px;
+    left: 20px;   
+}
+
+@media only screen and (max-width: 550px)
+{   
+    .buy-button{
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    .favorite-button{
+        padding: 10px 10px;
+    }
+}
+

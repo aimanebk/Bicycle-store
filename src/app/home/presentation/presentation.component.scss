@@ -1,0 +1,136 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/animations';
+
+$text-color :$text-primary-color;
+$button-color : $button-primary-color;
+
+
+.presentation-section{
+    min-height: 100vh;
+    .row {
+        height: fit-content;
+        min-height: 100vh;
+    }
+
+    .card-title{
+        font-size: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+        opacity: 0;
+    }
+
+    .card-text {
+        font-size: 20px;
+        opacity: 0;
+    }
+
+    a{
+        background: $button-color;
+        padding: 15px 35px;
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: $text-color;
+        border-radius: 25px;
+        opacity: 0;
+    }
+}
+
+.image-container{
+    .img-1{
+        width: 300px;
+        position: absolute;
+        z-index: 1;
+        top: -74px;
+        opacity: 0;
+      }
+    
+      .img-2{
+        width: 300px;
+        position: absolute;
+        left: 201px;
+        top: -193px;
+        opacity: 0;
+      }
+}
+
+.title-animation {
+    @include text-animation();
+    animation-delay: 0.5s;
+}
+
+.text-animation {
+    @include text-animation();
+    animation-delay: 2s;
+}
+
+.button-animation {
+    @include text-animation();
+    animation-delay: 3s;
+}
+
+.slide-in-left {
+    @include slide-in-left();
+    animation-delay: 1.2s;
+
+}
+
+.slide-in-right {
+    @include slide-in-right();
+    animation-delay: 1s;
+}
+
+
+@media only screen and (max-width: 1050px)
+{   
+    .image-container{
+        .img-1{
+            width: 250px;
+            }
+        
+        .img-2{
+        width: 250px;
+        }
+    }
+}
+
+@media only screen and (max-width: 950px)
+{   
+    .image-container{
+        .img-1{
+            width: 200px;
+            }
+        
+        .img-2{
+        width: 200px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px)
+{   
+    .presentation-section{
+        .card-title{
+            font-size: 42px;
+        }
+    }
+
+    .image-container{
+        text-align: center;
+
+        .img-1{
+            width: none;
+            position: initial;
+            z-index: 1;
+            top: 0px;
+            left:0px
+        }
+        
+        .img-2{
+            display: none;
+        }
+    }
+}
+  
+  
+  

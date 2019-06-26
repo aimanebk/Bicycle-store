@@ -1,0 +1,38 @@
+@import '../../shared/styles/animations';
+
+
+.products-section {
+    min-height: 100vh;
+    padding: 7em 0 0 0;
+    position: relative;
+}
+
+.column{
+    opacity:0;
+}
+
+.slide-in-left {
+    @include slide-in-left();
+    animation-delay: 1.2s;
+
+}
+
+.slide-in-right {
+    @include slide-in-full-right();
+    animation-delay: 1s;
+}
+
+
+@media (max-width: 767.98px) {
+    .products-section  {
+        padding: 2em 0; 
+    } 
+}
+
+  
+  
+  
+
+ 
+
+  
